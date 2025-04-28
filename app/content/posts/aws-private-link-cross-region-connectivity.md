@@ -1,6 +1,7 @@
 +++
 title = 'AWS Private Link Cross Region Connectivity lab'
 date = 2025-04-26T12:34:29+01:00
+tags = ['Home Lab', 'AWS', 'VPC Endpoint']
 draft = false
 +++
 

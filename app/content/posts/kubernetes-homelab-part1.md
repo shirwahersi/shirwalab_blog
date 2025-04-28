@@ -1,6 +1,7 @@
 +++
 title = 'Kubernetes Homelab, Part I: Talos Kubernetes on KVM using Terraform'
 date = 2025-04-13T11:35:32+01:00
+tags = ['Home Lab', 'Talos', 'Kubernetes']
 +++
 
 ## Overview

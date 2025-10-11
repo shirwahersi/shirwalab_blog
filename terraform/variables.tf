@@ -29,3 +29,8 @@ variable "hosted_zone" {
   type    = string
   default = "shirwalab.net"
 }
+
+variable "cloudflare_zone_id" {
+  type    = string
+  default = "c4bc467362a2dbf554d24b23cf6e0fcf"
+}

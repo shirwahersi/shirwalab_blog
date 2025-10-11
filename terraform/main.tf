@@ -182,3 +182,13 @@ resource "aws_route53_record" "blog_cf" {
     evaluate_target_health = false
   }
 }
+
+resource "cloudflare_dns_record" "blog_cf" {
+  zone_id = var.cloudflare_zone_id
+  name    = "@" # apex (shirwalab.net)
+  type    = "CNAME"
+  comment = "CNAME record for CloudFront distribution to point to shirwalab.net"
+  content = aws_cloudfront_distribution.s3_distribution.domain_name
+  proxied = true
+  ttl     = 1 # auto when proxied
+}

@@ -14,3 +14,7 @@ provider "aws" {
     tags = local.envname_tags
   }
 }
+
+provider "cloudflare" {
+  api_token = jsondecode(data.aws_secretsmanager_secret_version.secrets.secret_string)["cloudflare_token"]
+}

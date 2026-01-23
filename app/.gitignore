@@ -3,6 +3,10 @@
 # Generated files by hugo
 **/public/
 **/resources/_gen/
+.hugo_build.lock
+
+# Hugo modules cache (optional - can be regenerated)
+_vendor/
 
 # Executable may be added to repository
 hugo.exe

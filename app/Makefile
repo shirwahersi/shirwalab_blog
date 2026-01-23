@@ -1,19 +1,25 @@
+.PHONY: init
+init:
+	@test -f go.mod || hugo mod init github.com/shirwahersi/shirwalab-blog
+	hugo mod get
+
+.PHONY: update
+update:
+	hugo mod get -u
+	hugo mod tidy
+
 .PHONY: clean
 clean:
 	rm -rf public/*
+	hugo mod clean
 
 .PHONY: build
 build:
-	hugo
-
-.PHONY: install
-install:
-	git clone https://github.com/jpanther/congo.git themes/congo
+	hugo --minify
 
 .PHONY: serve
 serve:
-	hugo server --buildDrafts --disableFastRender --gc --ignoreCache --noHTTPCache --forceSyncStatic --verbose -w 
-
+	hugo server --buildDrafts --disableFastRender
 
 .PHONY: deploy
 deploy: clean build
